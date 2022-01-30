@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <title>Odbierz Paczkę</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <div class="startbox wrapper ">
+        <div class="startbox__logo">
+        </div>
+        <div class="startbox__info">
+            <p>Możesz mieć swoją paczkę w kilkanaście sekund!</p>
+            <p class="startbox__info--alert">Rozpocznij klikając przycisk</p>
+        </div>
+        <button class="btn startbox__btn">Odbierz paczkę</button>
+    </div>
+
+    <div class="loader hide"></div>
+
+    <div class="numberbox wrapper  hide ">
+        <div class="numberbox__logo">
+        </div>
+        <div class="numberbox__info">
+            <p>Możesz mieć swoją paczkę w kilkanaście sekund!</p>
+            <p class="startbox__info--alert">Podaj numer telefonu i kod dostępu</p>
+        </div>
+        <div class="numberbox__form-tel">
+            <label for="telnumber" class="tellabel">Numer telefonu:</label>
+            <input type="number" name="telnumber" id="tel">
+            <div class="errorTel">!</div>
+        </div>
+        <div class="numberbox__form-code">
+            <label for="code" class="">Kod odbioru:</label>
+            <input type="number" name="code" id="cod">
+            <div class="errorCode">!</div>
+        </div>
+        <button type="submit" class="btn numberbox__btn">Odbierz paczkę</button>
+    </div>
+
+    <div class="popup wrapper hide ">
+        <div class="popup__logo"></div>
+        <div class="popup__info">
+            <p>Dziękujemy za skorzystanie z Envelo!</p>
+            <p class="howLong">!</p>
+            <p class="popup__info--alert">Co chcesz dalej zrobić?</p>
+        </div>
+        <div class="popup__buttons">
+            <button class="btn popup__buttons-end">To wszystko na dziś</button>
+            <button class="btn popup__buttons-back">Odbierz kolejną paczkę</button>
+        </div>
+    </div>
+
+    <div class="popuptel wrapper hide">
+        <div class="popuptel__logo"></div>
+        <div class="popuptel__info">
+            <p>Dziękujemy za skorzystanie z Envelo!</p>
+            <p class="popuptel__info--alert">Czy pozostawić ten sam numer telefonu dla kolejnej przesyłki?</p>
+        </div>
+        <div class="popuptel__buttons">
+            <button class="btn popuptel__buttons-end">Nie</button>
+            <button class="btn popuptel__buttons-back">Tak</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

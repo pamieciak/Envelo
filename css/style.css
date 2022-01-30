@@ -1,0 +1,618 @@
+@-webkit-keyframes click {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-box-shadow: 0px 0px 3px black;
+            box-shadow: 0px 0px 3px black;
+  }
+}
+
+@keyframes click {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-box-shadow: 0px 0px 3px black;
+            box-shadow: 0px 0px 3px black;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.btn {
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 100px;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #d52b1e;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:active {
+  -webkit-animation: click .2s;
+          animation: click .2s;
+}
+
+.startbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.startbox__logo {
+  width: 30rem;
+  height: 8rem;
+  background-image: url("../img/envelo-logo-2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.startbox__title {
+  font-size: 6rem;
+}
+
+.startbox__info {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.startbox__info--alert {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 16px solid black;
+  border-top: 16px solid #d52b1e;
+  border-radius: 50%;
+  -webkit-animation: rotate 0.6s linear infinite;
+          animation: rotate 0.6s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.numberbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.numberbox__logo {
+  width: 30rem;
+  height: 8rem;
+  background-image: url("../img/envelo-logo-2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.numberbox__title {
+  font-size: 6rem;
+}
+
+.numberbox__info {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.numberbox__info--alert {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.numberbox__form-tel, .numberbox__form-code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0.5rem;
+  width: 100%;
+}
+
+.numberbox__form-tel label, .numberbox__form-code label {
+  margin: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.numberbox__form-tel input, .numberbox__form-code input {
+  margin: 0 1rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 1px 5px black;
+          box-shadow: 0 1px 5px black;
+  border-radius: 100px;
+}
+
+.errorTel,
+.errorCode {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #d52b1e;
+  visibility: hidden;
+}
+
+.popup {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+  width: 90%;
+  background-color: #d52b1e;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 100vh black;
+          box-shadow: 0px 0px 100vh black;
+  overflow: hidden;
+  -webkit-animation: show 0.5s ease-out;
+          animation: show 0.5s ease-out;
+}
+
+.popup__logo {
+  background-image: url("../img/envelo-logo-1.png");
+  width: 300px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+}
+
+.popup__title {
+  font-size: 3rem;
+}
+
+.popup__info {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.popup__info--alert {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.popup__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.popup__buttons-end, .popup__buttons-back {
+  margin: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  color: #d52b1e;
+  background-color: #fff;
+}
+
+.popup__buttons-back {
+  color: black;
+  background-color: white;
+}
+
+.howLong {
+  visibility: hidden;
+}
+
+.popuptel {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+  width: 90%;
+  background-color: #d52b1e;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 100vh black;
+          box-shadow: 0px 0px 100vh black;
+  overflow: hidden;
+  -webkit-animation: show 0.5s ease-out;
+          animation: show 0.5s ease-out;
+}
+
+.popuptel__logo {
+  background-image: url("../img/envelo-logo-1.png");
+  width: 300px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+}
+
+.popuptel__title {
+  font-size: 3rem;
+}
+
+.popuptel__info {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.popuptel__info--alert {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.popuptel__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.popuptel__buttons-end, .popuptel__buttons-back {
+  margin: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  color: #d52b1e;
+  background-color: #fff;
+}
+
+.popuptel__buttons-back {
+  color: black;
+  background-color: white;
+}
+
+@-webkit-keyframes show {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  60% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes show {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  60% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .startbox__logo {
+    width: 400px;
+    height: 150px;
+  }
+  .startbox__title {
+    font-size: 10rem;
+  }
+  .startbox__info {
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .startbox__info--alert {
+    font-weight: bold;
+  }
+  .startbox__btn {
+    padding: 2rem 4rem;
+    font-size: 2.5rem;
+  }
+  .numberbox__logo {
+    width: 400px;
+    height: 150px;
+  }
+  .numberbox__title {
+    font-size: 10rem;
+  }
+  .numberbox__info {
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .numberbox__info--alert {
+    font-weight: bold;
+  }
+  .numberbox__btn {
+    padding: 2rem 4rem;
+    font-size: 2.5rem;
+  }
+  .numberbox__form-tel, .numberbox__form-code {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0.5rem;
+    width: 60%;
+  }
+  .numberbox__form-tel label, .numberbox__form-code label {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 3rem;
+  }
+  .numberbox__form-tel input, .numberbox__form-code input {
+    margin: 0 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid black;
+    -webkit-box-shadow: 0 1px 5px black;
+            box-shadow: 0 1px 5px black;
+    border-radius: 100px;
+  }
+  .popup {
+    height: 50vh;
+    width: 50%;
+    background-color: #d52b1e;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 100vh black;
+            box-shadow: 0px 0px 100vh black;
+  }
+  .popup__logo {
+    width: 400px;
+    height: 180px;
+    background-image: url("../img/envelo-logo-1.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .popup__title {
+    font-size: 6rem;
+  }
+  .popup__info {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .popup__info--alert {
+    margin-top: 1rem;
+  }
+  .popup__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .popup__buttons-end, .popup__buttons-back {
+    margin: 1rem;
+    padding: 2rem;
+    font-size: 2rem;
+    width: 90%;
+  }
+  .popup__buttons-back {
+    background-color: white;
+  }
+  .popuptel {
+    height: 50vh;
+    width: 50%;
+    background-color: #d52b1e;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 100vh black;
+            box-shadow: 0px 0px 100vh black;
+  }
+  .popuptel__logo {
+    width: 400px;
+    height: 180px;
+    background-image: url("../img/envelo-logo-1.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .popuptel__title {
+    font-size: 6rem;
+  }
+  .popuptel__info {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .popuptel__info--alert {
+    margin-top: 1rem;
+  }
+  .popuptel__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .popuptel__buttons-end, .popuptel__buttons-back {
+    margin: 1rem;
+    padding: 2rem;
+    font-size: 2rem;
+    width: 90%;
+  }
+  .popuptel__buttons-back {
+    background-color: white;
+  }
+}
+
+@media (min-width: 992px) {
+  .numberbox__form-tel, .numberbox__form-code {
+    width: 50%;
+  }
+  .popup,
+  .popuptel {
+    height: 70%;
+  }
+  .popup__logo,
+  .popuptel__logo {
+    width: 500px;
+    height: 150px;
+  }
+  .popup__buttons,
+  .popuptel__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
